@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3b93a0ad4d99f1521089ca61cb977ed2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3b93a0ad4d99f1521089ca61cb977ed2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3b93a0ad4d99f1521089ca61cb977ed2 = L.map(
+                "map_3b93a0ad4d99f1521089ca61cb977ed2",
+                {
+                    center: [28.6139, 77.209],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e37fba0e4c84e046420418198c9d8d36 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_e37fba0e4c84e046420418198c9d8d36.addTo(map_3b93a0ad4d99f1521089ca61cb977ed2);
+        
+    
+            var marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_bf50f7d12ef31383fbf9490956a28c72 = L.marker(
+                [28.741133, 76.965237],
+                {}
+            ).addTo(marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f);
+        
+    
+            var icon_ca9168410cb533d13faf2b7be911e58e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_bf50f7d12ef31383fbf9490956a28c72.setIcon(icon_ca9168410cb533d13faf2b7be911e58e);
+        
+    
+        var popup_5a296a9ef6ec3ba0bc7dde1dda28bf29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a70b988d0704a96a041ac26bdc2797e2 = $(`<div id="html_a70b988d0704a96a041ac26bdc2797e2" style="width: 100.0%; height: 100.0%;"><strong>Dr Br. Ambedkar Hospital Blood Bank</strong><br>A+: 44<br>A-: 47<br>B+: 0<br>B-: 3<br>AB+: 3<br>AB-: 39<br>O+: 9<br>O-: 19<br><br><div style='background-color: orange; padding: 5px; border-radius: 5px;'>ORDER</div></div>`)[0];
+                popup_5a296a9ef6ec3ba0bc7dde1dda28bf29.setContent(html_a70b988d0704a96a041ac26bdc2797e2);
+            
+        
+
+        marker_bf50f7d12ef31383fbf9490956a28c72.bindPopup(popup_5a296a9ef6ec3ba0bc7dde1dda28bf29)
+        ;
+
+        
+    
+    
+            var marker_3054cd13fffcbb1907261c4aac725ff3 = L.marker(
+                [28.7062292, 77.126557],
+                {}
+            ).addTo(marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f);
+        
+    
+            var icon_041d3f4dc3148b6b0096dd2106a734f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_3054cd13fffcbb1907261c4aac725ff3.setIcon(icon_041d3f4dc3148b6b0096dd2106a734f4);
+        
+    
+        var popup_1a915e4163553e716ef1fc94283db8c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e42b9a51cd3c2a656110f1a48096253 = $(`<div id="html_0e42b9a51cd3c2a656110f1a48096253" style="width: 100.0%; height: 100.0%;"><strong>Saroj Super Speciality Hospital</strong><br>A+: 21<br>A-: 36<br>B+: 23<br>B-: 6<br>AB+: 24<br>AB-: 24<br>O+: 12<br>O-: 1<br><br><div style='background-color: orange; padding: 5px; border-radius: 5px;'>ORDER</div></div>`)[0];
+                popup_1a915e4163553e716ef1fc94283db8c5.setContent(html_0e42b9a51cd3c2a656110f1a48096253);
+            
+        
+
+        marker_3054cd13fffcbb1907261c4aac725ff3.bindPopup(popup_1a915e4163553e716ef1fc94283db8c5)
+        ;
+
+        
+    
+    
+            var marker_55e5766d51785fac283a52e4cce145fa = L.marker(
+                [28.7133405, 77.0767417],
+                {}
+            ).addTo(marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f);
+        
+    
+            var icon_78ff476b435035fdae0d5363f5dd7207 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_55e5766d51785fac283a52e4cce145fa.setIcon(icon_78ff476b435035fdae0d5363f5dd7207);
+        
+    
+        var popup_0e6cd9fc71ba0ad8f7a343bf8cf6309b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1e514a6847f83a62378d1909590966f = $(`<div id="html_e1e514a6847f83a62378d1909590966f" style="width: 100.0%; height: 100.0%;"><strong>Brahm Prakash Blood Bank</strong><br>A+: 38<br>A-: 39<br>B+: 23<br>B-: 46<br>AB+: 24<br>AB-: 17<br>O+: 37<br>O-: 25<br><br><div style='background-color: orange; padding: 5px; border-radius: 5px;'>ORDER</div></div>`)[0];
+                popup_0e6cd9fc71ba0ad8f7a343bf8cf6309b.setContent(html_e1e514a6847f83a62378d1909590966f);
+            
+        
+
+        marker_55e5766d51785fac283a52e4cce145fa.bindPopup(popup_0e6cd9fc71ba0ad8f7a343bf8cf6309b)
+        ;
+
+        
+    
+    
+            var marker_18a7dd0416890b0fa419f88628bfb506 = L.marker(
+                [28.6812557, 77.0796011],
+                {}
+            ).addTo(marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f);
+        
+    
+            var icon_93658a0f155c6464771c850b9011b4da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_18a7dd0416890b0fa419f88628bfb506.setIcon(icon_93658a0f155c6464771c850b9011b4da);
+        
+    
+        var popup_33a2008b81019d283fb085edec144b79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cb4c2282e3cf6fdda57cb813b7d59e0 = $(`<div id="html_2cb4c2282e3cf6fdda57cb813b7d59e0" style="width: 100.0%; height: 100.0%;"><strong>Mission Jan Jagriti Blood Bank</strong><br>A+: 13<br>A-: 8<br>B+: 9<br>B-: 20<br>AB+: 16<br>AB-: 5<br>O+: 15<br>O-: 47<br><br><div style='background-color: orange; padding: 5px; border-radius: 5px;'>ORDER</div></div>`)[0];
+                popup_33a2008b81019d283fb085edec144b79.setContent(html_2cb4c2282e3cf6fdda57cb813b7d59e0);
+            
+        
+
+        marker_18a7dd0416890b0fa419f88628bfb506.bindPopup(popup_33a2008b81019d283fb085edec144b79)
+        ;
+
+        
+    
+    
+            var marker_ab5883752ac805f1807c4260dfe30cb7 = L.marker(
+                [28.7040649, 77.1598121],
+                {}
+            ).addTo(marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f);
+        
+    
+            var icon_0c30c34f191f7e5c2392600e2ef963e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_ab5883752ac805f1807c4260dfe30cb7.setIcon(icon_0c30c34f191f7e5c2392600e2ef963e7);
+        
+    
+        var popup_61d2874141640b3edfab89e30ea7dbf8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db09dc7a83f5a1bccd9bbe8f8e8e208c = $(`<div id="html_db09dc7a83f5a1bccd9bbe8f8e8e208c" style="width: 100.0%; height: 100.0%;"><strong>Lions Blood Bank</strong><br>A+: 0<br>A-: 18<br>B+: 35<br>B-: 24<br>AB+: 49<br>AB-: 29<br>O+: 19<br>O-: 19<br><br><div style='background-color: orange; padding: 5px; border-radius: 5px;'>ORDER</div></div>`)[0];
+                popup_61d2874141640b3edfab89e30ea7dbf8.setContent(html_db09dc7a83f5a1bccd9bbe8f8e8e208c);
+            
+        
+
+        marker_ab5883752ac805f1807c4260dfe30cb7.bindPopup(popup_61d2874141640b3edfab89e30ea7dbf8)
+        ;
+
+        
+    
+    
+            marker_cluster_f2e3e8e54ab5b2c2bcc0e0727e87a35f.addTo(map_3b93a0ad4d99f1521089ca61cb977ed2);
+        
+</script>
+</html>

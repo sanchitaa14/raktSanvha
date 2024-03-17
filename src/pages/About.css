@@ -1,0 +1,142 @@
+/* General styles */
+.about-container {
+    width: 100%;
+    margin: 5 auto;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 1rem;
+  }
+  #about{
+    margin-top: 5rem;
+  }
+  .gradient-button {
+    background-image: linear-gradient(to right, #4f46e5, #6a85b6);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .about-section-tagline {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #003c8f;
+  }
+  
+  .about-section-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col-1-2 {
+    flex-basis: calc(50% - 30px);
+  }
+  
+  .about-section-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .about-section-body h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+    color: #333;
+  }
+  
+  .about-section-body p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  .about-section-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  /* Animations */
+  .about-section-title {
+    animation: slideInDown 0.5s ease;
+  }
+  
+  .about-section-tagline {
+    animation: fadeIn 1s ease 0.5s forwards;
+  }
+  
+  .col-1-2:nth-child(1) img {
+    animation: fadeInLeft 1s ease forwards;
+  }
+  
+  .col-1-2:nth-child(2) {
+    animation: fadeInRight 1s ease forwards;
+  }
+  
+  .section-body h3 {
+    animation: slideInUp 1s ease forwards;
+  }
+  
+  .section-body p {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .about-section-footer button {
+    animation: fadeInUp 1s ease 1s forwards;
+    background-color: #003c8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+  }
+  .about-section-footer button:hover {
+    background-color: #002855;
+  }
+  .about-section-footer button:active {
+    transform: scale(0.95);
+  }
+  .about-section-footer button:focus {
+    outline: none;
+  }
+  /* Responsive styles */
+  @media screen and (max-width: 767px) {
+    .col-1-2 {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .section-body img {
+      max-width: 80%;
+      margin: 0 auto 30px;
+    }
+    .bout-section-footer button{
+      margin: 0 auto;
+      width: auto;
+    }
+  }

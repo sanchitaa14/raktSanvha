@@ -60,13 +60,13 @@ function Data() {
         "name": "Lions Blood Bank",
         "address": "Address of Lions Blood Bank",
         "A+": 48,
-        "A-": 12,
-        "B+": 4,
-        "B-": 44,
-        "AB+": 26,
-        "AB-": 50,
-        "O+": 41,
-        "O-": 7
+        // "A-": 12,
+        // "B+": 4,
+        // "B-": 44,
+        // "AB+": 26,
+        // "AB-": 50,
+        // "O+": 41,
+        // "O-": 7
       }
     ];
 

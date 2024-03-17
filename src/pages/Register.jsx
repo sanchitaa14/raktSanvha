@@ -89,6 +89,21 @@ function Register() {
         required
       />
     </div>
+    <div className="mb-6">
+  <label htmlFor="loginType" className="block text-gray-700 text-sm font-bold mb-2">Login type</label>
+  <select
+    id="loginType"
+    value={confPassword}
+    // onChange={(e) => setConfPassword(e.target.value)}
+    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    required
+  >
+    <option value="">Select Account Type</option>
+    <option value="hospital">Hospital</option>
+    <option value="individual">Individual</option>
+    <option value="blood_bank">Blood Bank</option>
+  </select>
+</div>
 
     {/* Submit */}
     <div className="flex items-center justify-between">

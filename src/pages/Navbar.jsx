@@ -32,6 +32,10 @@ function Nav() {
         e.preventDefault();
         window.location.href = "/";
     };
+    const handleProfile = async (e) => {
+        e.preventDefault();
+        window.location.href = "/profile";
+    };
 
     const handleFaq = async (e) => {
         e.preventDefault();
@@ -47,7 +51,7 @@ function Nav() {
 };
 const handleCode = async (e) => {
     e.preventDefault();
-    window.location.href = "/code";
+    window.location.href = "/campregister";
 };
 
 
@@ -59,10 +63,10 @@ const handleCode = async (e) => {
                     <img src={logo} alt="logo" className="cursor-pointer" onClick={handleClick} />
                 </div>
                 <div className="nav-buttons flex space-x-4">
-                    <button className="hover:underline" onClick={handleClick}>Profile</button>
+                    <button className="hover:underline" onClick={handleProfile}>Profile</button>
                     <button className="hover:underline" onClick={handleAbout}>About us</button>
                     <button className="hover:underline" onClick={handleFaq}>FAQs</button>
-                    <button className="hover:underline" onClick={handleCode}></button>
+                    <button className="hover:underline" onClick={handleCode}>Create Your Camp</button>
                     <button className="hover:underline" onClick={handleCheckout}></button>
                 </div>
                 <div className="nav-signout">
