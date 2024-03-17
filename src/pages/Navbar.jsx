@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { auth } from "../firebase";
-import logo from "../assets/logoBlood.jpg";
+import logo from "../assets/logo.jpg";
 import { signOut } from "firebase/auth";
 
 
@@ -58,9 +58,9 @@ const handleCode = async (e) => {
 
     return (
         <div id="nav" className="bg-gray-800 text-white py-4">
-            <div className="container mx-auto flex justify-between items-center">
+            <div className="container mx-auto flex justify-between items-center py-2 px-4">
                 <div className="nav-logo">
-                    <img src={logo} alt="logo" className="cursor-pointer" onClick={handleClick} />
+                    <img src={logo} alt="logo" className="cursor-pointer w-8 h-8" onClick={handleClick} />
                 </div>
                 <div className="nav-buttons flex space-x-4">
                     <button className="hover:underline" onClick={handleProfile}>Profile</button>

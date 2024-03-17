@@ -13,12 +13,13 @@ import Footer from './pages/Footer';
 import CampRegistrationForm from './pages/CampRegister';
 import Profile from './pages/Profile';
 import FindBloodBanks from './pages/Map';
-import Chatbot from './pages/Chatbot';
 import OrderTracker from './pages/components/Track';
+import ChatbotComponent from './pages/Chatbot';
 function App() {
   return (
     <div className="App">
       <Nav/>
+      <ChatbotComponent/>
       <Router>
         <Routes>
           <Route path ="/track" element={<OrderTracker/>}/>
@@ -32,7 +33,6 @@ function App() {
           <Route path='/donate' element={<BloodDonationForm/>}/>
           <Route path='/campregister' element={<CampRegistrationForm/>}/>
           <Route path='/map' element={<FindBloodBanks/>}/>
-          <Route path='/chatbot' element={<Chatbot/>}/>
         </Routes>
       </Router>
       <Footer/>

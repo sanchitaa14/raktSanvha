@@ -8,7 +8,7 @@ const Hero = () => {
     {
       title: "Make a Difference Today!",
       quote:
-        "Your donation can change someone's life. Help us provide food, shelter, and education to those in need today.",
+        "Your donation can change someone's life. Help us provide a source of new life, hope, and happiness to those in need today.",
       button: "Donate Now",
     },
     {

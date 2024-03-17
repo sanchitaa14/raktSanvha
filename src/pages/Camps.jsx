@@ -11,8 +11,8 @@ export default function Camps() {
 
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4">Upcoming Camps</h1>
-      <table className="min-w-full divide-y divide-gray-200">
+      <h1 className="text-3xl font-bold mb-4 mx-8">Upcoming Camps</h1>
+      <table className="min-w-full divide-y divide-gray-200 mx-8">
         <thead className="bg-gray-50">
           <tr>
             <th className="px-10 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Camp Name</th>

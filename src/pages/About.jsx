@@ -18,7 +18,7 @@ function AboutUs() {
               <div className="col-1-2 animate-slide-in-left ">
                 <h3 className="text-2xl font-bold mb-4">Who are we</h3>
                 <p className="text-lg mb-6">
-                  We are a non-profit organization dedicated to making a positive impact in the world. Our mission is to support various causes and charities, and to help those in need through donations and fundraising!
+                  We are a non-profit organization dedicated to making a positive impact in the world. Our mission is to support various causes and charities, and to help those in need through timely blood accesibility!
                 </p>
               </div>
               <div className="col-1-2 animate-slide-in-right">
@@ -30,7 +30,7 @@ function AboutUs() {
               <div className="col-1-2 animate-slide-in-left">
                 <h3 className="text-2xl font-bold mb-4">How we work</h3>
                 <p className="text-lg mb-6">
-                  We work tirelessly to identify and support causes and charities that align with our values and mission. We partner with organizations that have a proven track record of making a positive impact in their communities. We rely on the generosity of our donors to fund our efforts, and we are committed to transparency and accountability in all that we do!
+                  We work tirelessly to identify and support causes and campaigns that align with our values and mission. We partner with organizations that have a proven track record of making a positive impact in their communities. We rely on the generosity of our donors to fund our efforts, and we are committed to transparency and accountability in all that we do!
                 </p>
               </div>
             </div>
