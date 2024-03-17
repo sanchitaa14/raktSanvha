@@ -12,7 +12,7 @@ function Data() {
       {
         "name": "Dr BR Ambedkar Blood Bank",
         "address": "Address of Dr BR Ambedkar Blood Bank",
-        "district": "Patel Chowk",
+        "district": "Shahdara",
         "city": "Delhi",
         "A+": 16,
         "A-": 22,
@@ -26,7 +26,7 @@ function Data() {
       {
         "name": "Saroj Super Speciality Hospital",
         "address": "Address of Saroj Super Speciality Hospital",
-        "district": "Anand Vihar",
+        "district": "South West",
         "city": "Delhi",
         "A+": 7,
         "A-": 0,
@@ -40,7 +40,7 @@ function Data() {
       {
         "name": "Brahm Prakash Blood Bank",
         "address": "Address of Brahm Prakash Blood Bank",
-        "district": "Mayur Vihar",
+        "district": "West",
         "city": "Delhi",
         "A+": 6,
         "A-": 7,
@@ -54,7 +54,7 @@ function Data() {
       {
         "name": "Mission Jan Jagriti Blood Bank",
         "address": "Address of Mission Jan Jagriti Blood Bank",
-        "district": "Rohini east",
+        "district": "South east",
         "city": "Delhi",
         "A+": 46,
         "A-": 21,
@@ -68,7 +68,7 @@ function Data() {
       {
         "name": "Lions Blood Bank",
         "address": "Address of Lions Blood Bank",
-        "district": "Rohini",
+        "district": "North West",
         "city": "Delhi",
         "A+": 48,
         // "A-": 12,
@@ -157,7 +157,7 @@ function Data() {
             <option value="O-">O-</option>
           </select>
           
-          <label htmlFor="districtFilter" className="mr-2">Filter by District:</label>
+          <label htmlFor="districtFilter" className="mr-2">Filter by City:</label>
           <select
             id="cityFilter"
             className="border border-gray-400 rounded px-4 py-2 mr-4"

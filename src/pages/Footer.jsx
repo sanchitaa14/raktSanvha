@@ -2,54 +2,54 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 text-white py-8 px-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="footer-col">
-            <h4 className="text-lg font-bold mb-4">company</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase">company</h4>
             <ul>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">about us</a>
+                <a href="#" className="text-gray-300 hover:text-white">About As</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">our services</a>
+                <a href="#" className="text-gray-300 hover:text-white">Our Services</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">privacy policy</a>
+                <a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">work with us</a>
+                <a href="#" className="text-gray-300 hover:text-white">Work With Us</a>
               </li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4 className="text-lg font-bold mb-4">get help</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase">get help</h4>
             <ul>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">FAQ</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">shipping</a>
+                <a href="#" className="text-gray-300 hover:text-white">Shipping</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">order status</a>
+                <a href="/track" className="text-gray-300 hover:text-white">Order status</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">payment options</a>
+                <a href="#" className="text-gray-300 hover:text-white">Payment options</a>
               </li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4 className="text-lg font-bold mb-4">Blood Banks</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase">Blood Banks</h4>
             <ul>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">guidelines</a>
+                <a href="#" className="text-gray-300 hover:text-white">Guidelines</a>
               </li>
               {/* Add more items as needed */}
             </ul>
           </div>
           <div className="footer-col">
-            <h4 className="text-lg font-bold mb-4">follow us</h4>
+            <h4 className="text-lg font-bold mb-4 uppercase">follow us</h4>
             <div className="social-links">
               <a href="#" className="text-gray-300 hover:text-white">
                 <i className="fab fa-facebook-f"></i>
