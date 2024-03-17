@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-const FindBloodBanks = () => {
+
+function FindBloodBanks() {
     useEffect(() => {
-        const initMap = () => {
-            const map = new window.google.maps.Map(document.getElementById('map'), {
+        function initMap() {
+            var map = new window.google.maps.Map(document.getElementById('map'), {
                 center: { lat: 28.6139, lng: 77.2090 },
                 zoom: 15
             });
 
-            const infoWindow = new window.google.maps.InfoWindow({ map });
+            var infoWindow = new window.google.maps.InfoWindow({ map: map });
 
+            // Try HTML5 geolocation to get the user's location
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(position => {
-                    const pos = {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
@@ -21,34 +22,37 @@ const FindBloodBanks = () => {
                     infoWindow.setContent('You are here');
                     map.setCenter(pos);
 
-                    const request = {
+                    // Search for nearby blood banks and hospitals with blood banks using Places API
+                    var request = {
                         location: pos,
-                        radius: '5000',
+                        radius: '5000',  // Search within a 5 km radius
                         types: ['hospital', 'health', 'blood_bank']
                     };
 
-                    const service = new window.google.maps.places.PlacesService(map);
-                    service.nearbySearch(request, (results, status) => {
+                    var service = new window.google.maps.places.PlacesService(map);
+                    service.nearbySearch(request, function (results, status) {
                         if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-                            const bounds = new window.google.maps.LatLngBounds();
-                            let totalDistance = 0;
-                            let nearestLocation = null;
-                            let nearestDistance = Number.MAX_VALUE;
+                            var bounds = new window.google.maps.LatLngBounds();
+                            var totalDistance = 0;
+                            var nearestLocation = null;
+                            var nearestDistance = Number.MAX_VALUE;
 
-                            for (let i = 0; i < results.length; i++) {
-                                const place = results[i];
+                            for (var i = 0; i < results.length; i++) {
+                                var place = results[i];
                                 if (place.types.includes('hospital') || place.types.includes('blood_bank')) {
-                                    const li = document.createElement('li');
+                                    var li = document.createElement('li');
                                     li.textContent = place.name;
                                     document.getElementById('placesList').appendChild(li);
 
-                                    const marker = new window.google.maps.Marker({
-                                        map,
+                                    // Show the place on the map
+                                    var marker = new window.google.maps.Marker({
+                                        map: map,
                                         position: place.geometry.location,
                                         title: place.name
                                     });
 
-                                    const distance = window.google.maps.geometry.spherical.computeDistanceBetween(new window.google.maps.LatLng(pos.lat, pos.lng), place.geometry.location);
+                                    // Calculate and add distance
+                                    var distance = window.google.maps.geometry.spherical.computeDistanceBetween(new window.google.maps.LatLng(pos.lat, pos.lng), place.geometry.location);
                                     if (distance < nearestDistance) {
                                         nearestDistance = distance;
                                         nearestLocation = place;
@@ -59,26 +63,29 @@ const FindBloodBanks = () => {
                                 }
                             }
 
+                            // Fit the map to the bounds
                             map.fitBounds(bounds);
 
+                            // Show total distance
                             console.log('Total distance to all places: ' + (totalDistance / 1000).toFixed(2) + ' km');
 
+                            // Show route to nearest location
                             if (nearestLocation) {
-                                const directionsService = new window.google.maps.DirectionsService();
-                                const directionsDisplay = new window.google.maps.DirectionsRenderer();
+                                var directionsService = new window.google.maps.DirectionsService();
+                                var directionsDisplay = new window.google.maps.DirectionsRenderer();
                                 directionsDisplay.setMap(map);
 
-                                const request = {
+                                var request = {
                                     origin: pos,
                                     destination: nearestLocation.geometry.location,
                                     travelMode: 'DRIVING'
                                 };
 
-                                directionsService.route(request, (response, status) => {
+                                directionsService.route(request, function (response, status) {
                                     if (status === 'OK') {
                                         directionsDisplay.setDirections(response);
-                                        const route = response.routes[0];
-                                        const distanceText = route.legs[0].distance.text;
+                                        var route = response.routes[0];
+                                        var distanceText = route.legs[0].distance.text;
                                         document.getElementById('distance').textContent = 'Distance to nearest location: ' + distanceText;
                                     }
                                 });
@@ -87,40 +94,32 @@ const FindBloodBanks = () => {
                             }
                         }
                     });
-                }, () => {
+
+                }, function () {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             } else {
+                // Browser doesn't support Geolocation
                 handleLocationError(false, infoWindow, map.getCenter());
             }
 
-            const handleLocationError = (browserHasGeolocation, infoWindow, pos) => {
+            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
                 infoWindow.setContent(browserHasGeolocation ?
                     'Error: The Geolocation service failed.' :
                     'Error: Your browser doesn\'t support geolocation.');
             }
-        };
-
-        if (!window.google) {
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDXn0sLaBXyVkJhbT568JTeJJO81N7sW48&libraries=places,geometry&callback=initMap`;
-            script.async = true;
-            script.defer = true;
-            document.head.appendChild(script);
-        } else {
-            initMap();
         }
+
+        initMap();
     }, []);
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mb-4 mt-10">Find Nearby Blood Banks</h1>
-            <div id="map" className="h-96 w-full"></div>
-            <button className="gradient-button mr-4 p-10"><Link to="/form">Place your Request</Link></button>
-            <div id="distance" className="bg-blue-500 text-white py-4 px-6 mt-4"></div>
+            <h1>Find Nearby Blood Banks</h1>
+            <div id="map" style={{ height: '400px', width: '100%' }}></div>
             <ul id="placesList"></ul>
-            
+            <p id="distance"></p>
         </div>
     );
 }
